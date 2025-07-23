@@ -1,6 +1,7 @@
 name: Automated GitHub Actions Security Analysis with zizmor 🌈
 
 on:
+  workflow_dispatch: {}
   schedule:
     - cron: "0 0 * * *" # Run every day at midnight
 
@@ -12,7 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       security-events: write
-      contents: read
+      contents: read # only needed for private repos
+      actions: read # only needed for private repos
     steps:
       - name: Checkout repository
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4

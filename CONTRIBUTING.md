@@ -80,3 +80,5 @@ you can run the basic CI checks in your local environment:
   modern test runner for Rust.
 - [`cargo-audit`](https://docs.rs/cargo-audit/latest/cargo_audit/):
   tool to check `Cargo.lock` files for security vulnerabilities.
+
+Please do `git config core.hooksPath .githooks` to automatically run these tools on each commit.

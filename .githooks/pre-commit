@@ -1,0 +1,14 @@
+#!/bin/sh
+# SPDX-License-Identifier: MIT OR Apache-2.0
+
+set -e
+
+# just test
+cargo --locked nextest run --all-features
+cargo test --doc --all-features
+
+# just lint
+taplo format --check
+taplo lint
+cargo fmt --all --check
+cargo clippy --examples --tests --benches --all-features --all-targets --locked

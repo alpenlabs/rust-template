@@ -40,6 +40,9 @@ lints: toml-check-fmt toml-lint check-fmt clippy
 # Rust all tests
 test: unit-test doctest
 
+# Run all code-quality checks
+precommit: test lints
+
 # Publish crate to crates.io
 publish:
   cargo publish --token $CARGO_REGISTRY_TOKEN
@@ -51,3 +54,6 @@ audit:
 # Check GitHub Actions security analysis with `zizmor`
 check-github-actions-security:
   zizmor .
+
+# Performs one-time repo setup
+setup: git config core.hooksPath .githooks

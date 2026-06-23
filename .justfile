@@ -56,4 +56,5 @@ check-github-actions-security:
   zizmor .
 
 # Performs one-time repo setup
-setup: git config core.hooksPath .githooks
+setup:
+  git config core.hooksPath .githooks

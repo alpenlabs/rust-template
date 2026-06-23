@@ -21,8 +21,8 @@ hardened with [`zizmor`](https://docs.zizmor.sh).
   and it will be automatically triggered by CI on every new tag release.
   You just need to add a crates.io token to the `CARGO_REGISTRY_TOKEN` repository secret variable.
 
-This template has a lot of `CHANGEME` placeholders that you should replace with your own values.
-Please do a repository-wide search and replace all occurrences of `CHANGEME` with your own values.
+This template has a lot of `CHANGEME` placeholders that you should replace with your own values, as well as URLs pointing to the `rust-template` project.
+Please do a repository-wide search and replace all occurrences of `CHANGEME` and `rust-template` with your own values.
 
 ## Settings and Branch Protection Rules
 

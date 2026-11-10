@@ -4,11 +4,11 @@
 set -e
 
 # just test
-cargo --locked nextest run --all-features
-cargo test --doc --all-features
+cargo nextest run --all-features --locked
+cargo test --all-features --locked --doc
 
 # just lint
 taplo format --check
 taplo lint
 cargo fmt --all --check
-cargo clippy --examples --tests --benches --all-features --all-targets --locked
+cargo clippy --all-features --locked --all-targets --benches --examples --tests
